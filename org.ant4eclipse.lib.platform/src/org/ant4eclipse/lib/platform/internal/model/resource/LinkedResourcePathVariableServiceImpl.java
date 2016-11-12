@@ -36,7 +36,7 @@ public class LinkedResourcePathVariableServiceImpl implements LinkedResourcePath
    * @see org.ant4eclipse.lib.platform.model.resource.LinkedResourcePathVariableService#getLinkedResourcePath(java.lang.String)
    */
   public String getLinkedResourcePath(String pathVariable) {
-    return this._variables.get(pathVariable);
+    return this._variables.get(pathVariable != null ? pathVariable.toLowerCase() : null);
   }
 
   /**
@@ -44,7 +44,7 @@ public class LinkedResourcePathVariableServiceImpl implements LinkedResourcePath
    *      java.lang.String)
    */
   public void registerLinkedResourcePathVariable(String pathVariable, String location) {
-    this._variables.put(pathVariable, location);
+    this._variables.put(pathVariable != null ? pathVariable.toLowerCase() : null, location);
   }
 
   /**

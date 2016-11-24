@@ -408,9 +408,9 @@ public class JavaProjectRoleImpl extends AbstractProjectRole implements JavaProj
   private RawClasspathEntry getEntryForSourceFolder(final String sourceFolder) {
     Assure.notNull("sourceFolder", sourceFolder);
 
-    if ("".equals(sourceFolder)) {
-      return null;
-    }
+//    if ("".equals(sourceFolder)) {
+//      return null;
+//    }
 
     // normalize path
     final String normalizedSourceFolder = normalize(sourceFolder);
